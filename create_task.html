@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Создание заявки</title>
+	<link rel="stylesheet" type="text/css" href="./styles/registration_task.css">
+	<script src="./scripts/registration_task.js"></script>
+</head>
+<body>
+	<form action = "create_task.php" method = "post">
+		<div class = "create_task">
+			<h3>Регистрация заявки в системе ServiceDesk</h3>
+			<select id = "direction">
+				<option value = "rm">Рабочее место и ресурсы</option>
+				<option value = "kr">Корпоративные ресурсы</option>
+				<option value = "ib">Информационная безопасность</option>
+				<option value = "aho">Административно-хозяйственный отдел</option>
+				<option value = "bunu">Запрос в бухгалтерию</option>
+				<option value = "hr">Кадровые вопросы</option>
+			</select>
+			<select id = "information_system">
+				<option class = "rm" value = "rm_pc">Офисный компьютер</option>
+				<option class = "rm" value = "rm_notebook">Ноутбук с удаленкой</option>
+				<option class = "rm" value = "rm_email">Электронная почта</option>
+				<option class = "rm" value = "rm_print">Принтеры/Сканеры/МФУ</option>
+				<option class = "rm" value = "rm_rashod">Техника и расходные материалы</option>
+				
+				<option class = "kr" value = "kr_1c">Система 1С</option>
+				<option class = "kr" value = "kr_sdo">Электронный документооборот</option>
+				<option class = "kr" value = "kr_sd">Система ServiceDesk</option>
+
+				<option class = "ib" value = "ib_vipnet">Почта VipNet</option>
+				<option class = "ib" value = "ib_user">Учетная запись</option>
+				<option class = "ib" value = "ib_ecp">ЭЦП</option>
+
+				<option class = "aho" value = "aho_obesp">Административно-хозяйственное обеспечение</option>
+				<option class = "aho" value = "aho_parking">Парковка</option>
+				
+				<option class = "bunu" value = "bunu_zarplata">Зарплата</option>
+				<option class = "bunu" value = "bunu_nalog">Налоги</option>
+				<option class = "bunu" value = "bunu_other">Другой вопрос</option>
+
+				<option class = "hr" value = "hr_graphic">График работы</option>
+				<option class = "hr" value = "hr_kom">Командировки</option>
+				<option class = "hr" value = "hr_relax">Отпуск</option>
+			</select>
+			<select id = "subject" name = "subject">
+				<option class = "rm_pc" value = "rm_pc_inc">Устранение проблем с ПК</option>
+				<option class = "rm_pc" value = "rm_pc_soft">Установка ПО</option>
+				<option class = "rm_pc" value = "rm_pc_newrm">Организация нового РМ</option>
+				<option class = "rm_pc" value = "rm_pc_moverm">Перемещение РМ</option>
+				<option class = "rm_notebook" value = "rm_notebook_inc">Устранение проблем с ноутбуком</option>
+				<option class = "rm_notebook" value = "rm_notebook_config">Настройка ноутбука для удаленки</option>
+				<option class = "rm_notebook" value = "rm_notebook_consult">Консультация по подключению к удаленке</option>
+				<option class = "rm_email" value = "rm_email_conf">Настройка электронной почты</option>
+				<option class = "rm_email" value = "rm_email_archive">Архивация электронной почты</option>
+				<option class = "rm_print" value = "rm_print_inc">Устранение проблем с печатью</option>
+				<option class = "rm_print" value = "rm_print_scan">Устранение проблем со сканированием</option>
+				<option class = "rm_print" value = "rm_print_con">Подключение принтера/сканера/МФУ</option>
+				<option class = "rm_rashod" value = "rm_rashod_toner">Замена картриджа в принтере/МФУ</option>
+				<option class = "rm_rashod" value = "rm_rashod_baraban">Замена фотобарабана в принтере/МФУ</option>
+
+				<option class = "kr_1c" value = "kr_1c_conf">Настройка 1С</option>
+				<option class = "kr_1c" value = "kr_1c_cons">Консультация по 1С</option>
+				<option class = "kr_sdo" value = "kr_sdo_cons">Консультация по работе с СЭДО</option>
+				<option class = "kr_sd" value = "kr_sd_cancel">Отмена заявки</option>
+				<option class = "kr_sd" value = "kr_sd_cons">Консультация по системе ServiceDesk</option>
+
+				<option class = "ib_vipnet" value = "ib_vipnet_cli">Установка и настройка клиента VipNet</option>
+				<option class = "ib_vipnet" value = "ib_vipnet_cons">Консультация по VipNet</option>
+				<option class = "ib_user" value = "ib_user_pass">Смена пароля от УЗ</option>
+				<option class = "ib_user" value = "ib_user_create">Создать пользователя</option>
+				<option class = "ib_user" value = "ib_user_delete">Удалить пользователя</option>
+				<option class = "ib_user" value = "ib_user_locking">Заблокировать пользователя</option>
+				<option class = "ib_ecp" value = "ib_ecp_conf">Установка и настройка ЭЦП</option>
+				<option class = "ib_ecp" value = "ib_ecp_cons">Консультация по работе с ЭЦП</option>
+
+				<option class = "aho_obesp" value = "aho_obesp_kanc">Выдача канцелярских товаров</option>
+				<option class = "aho_obesp" value = "aho_obesp_water">Замена бутыли с водой</option>
+				<option class = "aho_obesp" value = "aho_obesp_remont">Ремонт мебели</option>
+				<option class = "aho_parking" value = "aho_parking_newcar">Заявка на парковочное место</option>
+				<option class = "aho_parking" value = "aho_parking_changecar">Смена автомобиля</option>
+				<option class = "aho_parking" value = "aho_parking_changecar">Отмена парковки</option>
+
+				<option class = "bunu_zarplata" value = "bunu_zarplata_rl">Расчётный лист</option>
+				<option class = "bunu_zarplata" value = "bunu_zarplata_rl">Справка по заработной плате</option>
+				<option class = "bunu_nalog" value = "bunu_nalog_ndfl">Справка НДФЛ</option>
+				<option class = "bunu_other" value = "bunu_other_cons">Консультация по бухгалтерским вопросам</option>
+
+				<option class = "hr_graphic" value = "hr_graphic_newgraph">Составление графика работы</option>
+				<option class = "hr_graphic" value = "hr_graphic_notfound">Получить график отсутствий сотрудников</option>
+				<option class = "hr_kom" value = "hr_kom_new">Оформление командировки</option>
+				<option class = "hr_kom" value = "hr_kom_other">Другой вопрос по командировке</option>
+				<option class = "hr_relax" value = "hr_relax_newgraph">Оформление отпуска</option>
+				<option class = "hr_relax" value = "hr_relax_cons">Консультация по отпускам</option>
+			</select>
+		</div>
+		<div class = "short_description">
+			<label for = "sh_desc">Краткое описание: </label>
+			<input type = "text" id = "sh_desc" name = "sh_desc"/>
+		</div>
+		<div class = "full_description">
+			<label for = "full_desc">Описание: </label>
+			<textarea id = "full_desc" name = "full_desc"></textarea>
+		</div>
+		<div class = "user_information">
+			<label for = "user">Пользователь: </label>
+			<input type="text" name="user" id = "user">
+		</div>
+		<div class = "contact_information">
+			<label for = "contact">Контактное лицо: </label>
+			<input type="text" name="contact" id = "contact">
+		</div>
+
+		<select id = "urgency" name = "urgency">
+			<option class = "standard_urg">Стандартная</option>
+			<option class = "high_urg">Высокая</option>
+		</select>
+
+		<button class="send_task" type="submit" id="send_task">Отправить</button>
+		<button class="cancel_task" type="submit" id="cancel_task">Отмена</button>
+	</form>
+</body>
+</html>
