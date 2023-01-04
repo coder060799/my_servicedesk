@@ -40,12 +40,12 @@
 	if ($data_end > $endWorkDay or $data_end < $startWorkDay)
 	{
 		// echo "Task time more then work day";
-		$end_SLA = $startNextDay;
+		$end_sla = $startNextDay;
 		// echo $end_SLA;
 	}
 	else
 	{
-		$end_SLA = $data_end;
+		$end_sla = $data_end;
 		// echo $end_SLA;
 	}
 
@@ -77,7 +77,7 @@
 	// Выбирае услугу по теме задачи
 	switch ($subject) {
 		// workgroup SUPPORT
-		case 'Устранение проблем с ПК':
+		case 'Офисный компьютер':
 			$service = "RM.2"
 			break;
 		case 'Установка ПО':
@@ -226,5 +226,5 @@
 	}
 
 	// Заносим данные в таблицу tasks нашей базы данных
-	mysqli_query($link, 'INSERT INTO tasks (user,contact,sh_desc,full_desc,service,data_begin,data_end,priority,attachments,workgroup) VALUES($user,$contact,$sh_desc,$full_desc,$service,$data_begin,$end_SLA,$priority,$attachments,workgroup']);
+	mysqli_query($link, 'INSERT INTO tasks (user,contact,sh_desc,full_desc,service,data_begin,data_end,priority,attachments,workgroup) VALUES($user,$contact,$sh_desc,$full_desc,$service,$data_begin,$end_sla,$priority,$attachments,workgroup']);
 ?>
