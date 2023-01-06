@@ -1,0 +1,98 @@
+@font-face {
+font-family: "BAUHS93"; 
+src: url("../fonts/BAUHS93.ttf"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+
+@font-face {
+font-family: "SigmarOne"; 
+src: url("../fonts/SigmarOne-Regular.ttf"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #1d1d1d;
+}
+
+.main_header {
+	background-color: #235caa;
+	width: 1700px;
+	height: 120px;
+	margin: 0 auto;
+	display: block;
+}
+
+.nav_button {
+	margin-left:  80px;
+	margin-top:  45px;
+	position:  absolute;
+}
+
+.h1_my_service_desk {
+	color:  white;
+	position: absolute;
+	margin-top:  20px;
+	margin-left:  250px;
+	font-family: "SigmarOne";
+	text-shadow: 5px 5px 1px black;
+	font-size: 16pt;
+	letter-spacing: 5px;
+}
+
+.search_input {
+	width:  350px;
+	height: 30px;
+	text-indent: 10px;
+	font-size: 12pt;
+	margin-left: 900px;
+	margin-top:  45px;
+	position: absolute;
+}
+
+input[type="search"]::-webkit-input-placeholder       {line-height: 20px;  transition: line-height 0.5s ease; font-style: italic;}
+input[type="search"]::-moz-placeholder                {line-height: 20px;  transition: line-height 0.5s ease; font-style: italic;}
+input[type="search"]:-moz-placeholder                 {line-height: 20px;  transition: line-height 0.5s ease; font-style: italic;}
+input[type="search"]:-ms-input-placeholder            {line-height: 20px;  transition: line-height 0.5s ease; font-style: italic;}
+input[type="search"]:focus::-webkit-input-placeholder {line-height: 100px; transition: line-height 0.5s ease;}
+input[type="search"]:focus::-moz-placeholder          {line-height: 100px; transition: line-height 0.5s ease;}
+input[type="search"]:focus:-moz-placeholder           {line-height: 100px; transition: line-height 0.5s ease;}
+input[type="search"]:focus:-ms-input-placeholder      {line-height: 100px; transition: line-height 0.5s ease;}
+
+.header_buttons {
+	margin-left:  1500px;
+	margin-top:  45px;
+	position: absolute;
+}
+
+.main_content {
+	width: 1700px;
+	height:  670px;
+	background-color: #ffffff;
+	margin:  0 auto;
+	margin-top:  20px;
+	display: block;
+}
+
+.main_footer {
+	height:  100px;
+	width: 1700px;
+	margin:  0 auto;
+	margin-top:  20px;
+	display: block;
+	background-color: #235caa;
+}
+
+.green {
+	color:  green;	
+}
+
+.blue {
+	color:  blue;
+}
